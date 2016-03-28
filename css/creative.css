@@ -55,6 +55,9 @@ p {
     background-color: #f05f40;
 }
 
+.bg-gray {
+    background-color: #eee;
+}
 .bg-dark {
     color: #fff;
     background-color: #222;
