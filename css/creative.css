@@ -181,7 +181,8 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    /*background-image: url(../img/header_han.jpg);*/
+    background-color: #303030;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
