@@ -15,13 +15,19 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    max-width: 60px;
     border-color: #f05f40;
     border-width: 3px;
 }
 
 hr.light {
     border-color: #fff;
+}
+
+hr.small {
+    max-width: 30px;
+    border-width: 3px;
+    border-color: #ccc;
 }
 
 a {
