@@ -2,12 +2,12 @@
 permalink:        pretty
 
 # Setup
-url:              http://qwtel.com
+url:              http://manticoa.github.io
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
-baseurl:          /hydejack
+baseurl:          /blog
 
-title:            Hydejack
+title:           manticoa
 
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
 description:      >
