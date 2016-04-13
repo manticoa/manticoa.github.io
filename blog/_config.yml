@@ -5,7 +5,7 @@ permalink:        pretty
 url:              http://manticoa.github.io
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
-baseurl:          /blog
+baseurl:          "/blog"
 
 title:            Manticoa
 
@@ -20,7 +20,7 @@ image:            public/img/sakura.jpg
 color:            '#A85641'
 
 author:
-  name:           'Florian Klampfer'
+  name:           'Kim HanSung'
   twitter:        malzeve
   github:         manticoa
   photo:          http://qwtel.com/public/img/flo.jpg
