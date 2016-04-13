@@ -1,5 +1,5 @@
 ---
 layout: blog_by_tag
-tag: hyde
-permalink: /tag/hyde/
+tag: android
+permalink: /tag/android/
 ---
