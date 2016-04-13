@@ -2,7 +2,7 @@
 permalink:        pretty
 
 # Setup
-url:              http://manticoa.github.io
+url:              http://manticoa.github.io/blog/
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
 baseurl:          
@@ -19,7 +19,7 @@ description:      >
 sidebar_tags:     [Manticoa, hyde]
 
 # Fallback image and color if not overwritten for tag or post
-image:            /hydejack/public/img/nap.jpg
+image:            public/img/nap.jpg
 color:            '#A85641'
 
 author:
