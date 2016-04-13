@@ -5,9 +5,9 @@ permalink:        pretty
 url:              http://manticoa.github.io
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
-baseurl:          /blog
+baseurl:          
 
-title:            Hydejack
+title:            Manticoa
 
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
 description:      >
@@ -16,7 +16,7 @@ description:      >
   You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 
 # The tags listed as entries in the sidebar
-sidebar_tags:     [jekyll, hyde]
+sidebar_tags:     [Manticoa, hyde]
 
 # Fallback image and color if not overwritten for tag or post
 image:            /hydejack/public/img/nap.jpg
