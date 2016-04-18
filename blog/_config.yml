@@ -16,7 +16,7 @@ description:      >
 sidebar_tags:     [android,tech,talk]
 
 # Fallback image and color if not overwritten for tag or post
-image:            public/img/sakura.jpg
+image:            /public/img/sakura.jpg
 color:            '#A85641'
 
 author:
