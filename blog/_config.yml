@@ -5,7 +5,7 @@ permalink:        pretty
 url:              
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
-baseurl:          http://manticoa.github.io/blog
+baseurl:          "/blog"
 
 title:            Manticoa
 
