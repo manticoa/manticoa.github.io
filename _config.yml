@@ -1,6 +1,6 @@
 # Site
 title:              개인적 악취미 공간
-bio:                'Jekyll version of the Massively theme by HTML5UP'
+bio:                '이런 저런 이야기들을 하고 있습니다.'
 description:        "이런 저런 이야기들을 하고 있습니다."
 locale:             ko_KR
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -35,9 +35,9 @@ disqus_shortname:   default
 
 # Social
 analytics-id:       "default"
-#twitter:            default
+twitter:            default
 facebook:           manticoa
-#instagram:          default
+instagram:          default
 github:             manticoa
 
 # personal
