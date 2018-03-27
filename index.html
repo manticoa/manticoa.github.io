@@ -1,332 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: null
+title: Jekyll Theme - Home Page - Massively
+description: Every great website starts with a great homepage. The homepage tells your viewers what your site is all about and gives your viewers a place to come back to.
+sitemap:
+    priority: 1.0
+    lastmod: 2017-11-02
+    changefreq: weekly
+---
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+    {% include head.html %}
 
-<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	</head>
+	<body class="is-loading">
 
-    <title>개발자가 필요하신가요?</title>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+				<!-- Intro -->
+					<div id="intro">
+            <h1>{{site.title}}</h1>
+						<h2>The Jekyll Theme Version</h2>
+						<p>Massively is an HTML5 website theme designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
+						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>. Jekyll integration by <a href="https://somiibo.com">Somiibo</a></p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+					</header>
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+				<!-- Nav -->
+					<nav id="nav">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+            {% include nav.html %}
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+						<ul class="icons">
+              <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+              <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
 
-</head>
+				<!-- Main -->
+					<div id="main">
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">Massively is a versatile Jekyll theme</a></h2>
+									<p>With only a few edits, you can have a stunningly beautiful website <br />
+                    nearly out of the box. Of course... you can always take it further <br />
+                    and make it something even more amazing!</p>
+								</header>
+								<a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>
+                <p>Regardless of your website's function, the homepage is what brings the user in.
+                  If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter some visitors.</p>
+                <p>Your homepage must clearly describe what your site is about.
+									Having engaging content will in this manner enable you to offer and it will make your customers more inclined to purchase from you. Content is a way to position your organization in the correct place for your clients to discover you.
+								</p>
+								<p>
+									In this manner, content in itself is a standout amongst the best promoting apparatuses in your whole advertising toolbox! Rather than making your content around your promoting technique, it's limitlessly more productive to fabricate your showcasing around your content.
+								 </p>
 
-<body id="page-top">
+							</article>
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+						<!-- Posts -->
+							<section class="posts">
+                {% for post in site.posts limit:3 %}
+                {% assign mod3 = forloop.index | modulo: 3 %}
+  								<article>
+  									<header>
+  										<span class="date">{{ post.date | date_to_string }}</span>
+  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
+  									</header>
+  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+  									<p>{{ post.excerpt }}</p>
+  									<ul class="actions">
+  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+  									</ul>
+  								</article>
+                  {% if mod3 == 0 %}
+                  <article>
+  									<header>
+  										<h2><a href="#">Sponsored</h2>
+  									</header>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">Hello!</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#tech">자주 쓰는것들</a>
-                    </li>
-                    <li>
-                    	<a class="page-scroll" href="#work">경력</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">포트폴리오</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">연락</a>
-                    </li>
-		    <li>
-			   <a href="afterbuy://paymentResult?imp_uid=imp_445922235270&merchant_uid=afterbuy_1535&imp_success=true">테스트</a>
-		    </li>
-		    </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+  								</article>
+                  {% endif %}
+                {% endfor %}
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>김한성</h1>
-                <hr>
-                <p>소프트웨어 개발자</p>
-            </div>
-        </div>
-    </header>
+							</section>
 
-<!--     <section class="bg-primary" id="about"> -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Hello!</h2>
-                 <!--    <hr class="light"> -->
-                 	<hr class="primary">
-                 	<div class="row section-content"> 
-                 		<div class="col-lg-6" style="text-align: center;";>
-	                 		<img src="img/12748_s.jpg" style="width: 220px">
-	                 	</div>
-	                 	<div class="col-lg-6">
-	                 	  <!--   <h4 class="section-heading"></h4> -->
-	                 		<p class="text-muted text-justify">안드로이드 개발을 주로 하고있어요
-	                 		 제가 제작하였던 어플리케이션을 아래쪽에 <a href="#portfolio">포트폴리오</a>로 정리해두었습니다 구경해보세요! 만약 궁금한점이나 좀더 이야기를 해보고 싶으시면 <a href="#contact">이메일이나 전화</a>로 연락 부탁 드려요.</p>
-	                 	</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+						<!-- Footer -->
+							<footer>
+                <ul class="actions">
+                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+                </ul>
+							</footer>
 
-    <section class="bg-gray" id="tech">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">개발에 자주 사용하는 것들</h2>
-                    <hr class="primary">
-                    <p class="text-muted text-justify"></p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 text-center">
- 					<!-- <div class="col-lg-8 col-lg-offset-2 text-center"> -->
-                    <div class="service-box">
-                        <!-- <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i> -->
-                         <i class="fa fa-4x fa-android wow bounceIn text-primary"></i>
-                        <h3>Android</h3>
-                        <p class="text-muted">개발에 많이 참여한 플랫폼입니다.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-code wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>JAVA</h3>
-                        <p class="text-muted">제가 선호하는 프로그래밍 언어입니다.</p>
-                    </div>
-                </div> 
-                <div class="col-lg-4 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-git wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>git</h3>
-                        <p class="text-muted">협업이 필요할때는 github을 사용하고 개인적인 개발은 bitbucket을 사용합니다.</p>
-                    </div>
-                </div>
-                <!-- 
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
+					</div>
 
-    <section id="work">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-12 text-center">
-    				<h2 class="section-heading">경력</h2>
-                 <!--    <hr class="light"> -->
-                 	<hr class="primary">
-                 	<h4>홍익 솔루션즈</h3>
-                 	<h5>
-	                 	디바이스드라이버
-	                 	<span class="bullet">•</span> 
-	                 	C 프로그래밍  
-                 	</h5>
-                    <p class="text-muted">홍익 솔루션즈에서 첫 개발을 시작하였습니다. 재직중에 안드로이드 솔루션 개발을 하였습니다.
-                    DPRAM 드라이버와 GPS 드라이버를 담당하였습니다.</p>
-					<hr class="small">
-					<!-- 분리선 -->
-                    <h4>파인원 커뮤니케이션즈 </h3>
-                 	<h5>
-	                 	안드로이드
-	                 	<span class="bullet">•</span> 
-	                 	JAVA 프로그래밍
-	                 	<span class="bullet">•</span> 
-	                 	성능 최적화
-                 	</h5>
-                    <p class="text-muted">삼성전자 북미향 안드로이드폰(Behold2) 기본UI 이슈와 버그를 수정하였습니다.</p>
-					<hr class="small">
-					<!-- 분리선 -->
-                    <h4>지닌</h3>
-                 	<h5>
-	                 	안드로이드 어플리케이션 개발
-	                 	<span class="bullet">•</span> 
-	                 	JAVA 프로그래밍
-                 	</h5>
-                    <p class="text-muted">삼성전자 안드로이드 위젯 어플리케이션을 개발하였습니다. 주식/날씨/캘린더 각 세가지 어플리케이션을 만들었습니다.</p>
-					<hr class="small">
-                    <!-- 분리선 -->
-                    <h4>이호스트데이터센터</h3>
-                 	<h5>
-	                 	서버
-	                 	<span class="bullet">•</span> 
-	                 	네트워크 관제
-	                 	<span class="bullet">•</span>
-	                 	사내 프로그램 개발
-                 	</h5>
-                    <p class="text-muted">서버구축과 장애처리및 네트워크 관제 업무를 하였습니다.</p>
-                    <hr class="small">
-                    <!-- 분리선 -->
-                    <h4>투블루</h3>
-                 	<h5>
-	                 	안드로이드 어플리케이션 개발
-	                 	<span class="bullet">•</span> 
-	                 	JAVA 프로그래밍
-                 	</h5>
-                    <p class="text-muted">투블루의 안드로이드 어플리케이션을 개발하였습니다. 여기서 보통 SI에서 할수없던 작업들을 많이 할수 있어 좋았습니다. </p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+				<!-- Footer -->
+        {% include foot.html %}
 
-    <section class="no-padding bg-gray" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-8 col-lg-offset-2 ">
-                    <a href="http://manticoa.tistory.com/entry/Tubloo-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C%EC%9D%84-%EB%A7%88%EC%B9%98%EB%A9%B0" class="portfolio-box">
-                        <img src="img/portfolio/tubloo01-market.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Android Application
-                                </div>
-                                <div class="project-name">
-                                    Tubloo
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-             <!--    <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
-       
-            </div>
-        </div>
-    </section>
+			</div>
 
-   <!--  <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside> -->
+		<!-- Scripts -->
+		{% include scripts-main.html %}
+    {% include tracking.html %}
 
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">연락주세요</h2>
-                    <hr class="primary">
-                    <p>같이 일해보고 싶으신가요? 필요하시다면 언제든지 연락주세요.</p>
-                </div>
-                <div class="col-lg-2 col-lg-offset-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:manticoa@gmail.com">manticoa@gmail.com</a></p>
-                </div>
-                    <div class="col-lg-2  text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="tel:010-7125-5823">+82 10-7125-5823</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
-
-</body>
-
+	</body>
 </html>
