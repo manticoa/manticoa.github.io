@@ -1,8 +1,8 @@
 # Site
-title:              Massively
+title:              개인적 악취미 공간
 bio:                'Jekyll version of the Massively theme by HTML5UP'
 description:        "Jekyll version of the Massively theme by HTML5UP"
-locale:             en_US
+locale:             ko_KR
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -41,9 +41,9 @@ instagram:          default
 github:             default
 
 # personal
-location:           Los Angeles, CA
-phone:              310-318-5555
-email:              info@default.com
+location:           서울, 대한민국
+phone:              010-7125-5823
+email:              manticoa@gmail.com
 
 # Gems
 gems:
